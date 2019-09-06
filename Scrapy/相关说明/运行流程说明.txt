@@ -1,0 +1,7 @@
+爬虫（Spiders）会把豆瓣的10个网址封装成requests对象，引擎会从爬虫（Spiders）里提取出requests对象，再交给调度器（Scheduler），让调度器把这些requests对象排序处理。
+
+
+然后引擎再把经过调度器处理的requests对象发给下载器（Downloader），下载器会立马按照引擎的命令爬取，并把response返回给引擎。
+
+
+紧接着引擎就会把response发回给爬虫（Spiders），这时爬虫会启动默认的处理response的parse方法，解析和提取出书籍信息的数据，使用item做记录，返回给引擎。引擎将它送入Item Pipeline（数据管道）处理。

@@ -1,0 +1,6 @@
+file1 = open('d:/360MoveData/Users/Administrator/Desktop/test/abc.txt','a',encoding='gb2312')
+file1.write('周芷若\n')     
+file1.write('赵敏\n')
+# filecontent = file1.read()
+# print(filecontent)
+# file1.close()
